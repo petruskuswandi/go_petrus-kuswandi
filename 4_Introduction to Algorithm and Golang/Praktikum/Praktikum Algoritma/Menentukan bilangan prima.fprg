@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="psychopet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-18 01:17:08 PM"/>
+        <attribute name="created" value="cHN5Y2hvcGV0O0xBUFRPUC1JVkk0UjBFRzsyMDIzLTAyLTE3OzA2OjIwOjEwIEFNOzMzMDk="/>
+        <attribute name="edited" value="cHN5Y2hvcGV0O0xBUFRPUC1JVkk0UjBFRzsyMDIzLTAyLTE4OzAxOjE3OjA4IFBNOzU7MzQ0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bilangan, n, i" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <output expression="&quot;masukkan bilangan yang ingin ditentukkan bilangan prima atau bukan&quot;" newline="False"/>
+            <input variable="bilangan"/>
+            <for variable="i" start="1" end="bilangan" direction="inc" step="1">
+                <if expression="bilangan % i == 0">
+                    <then>
+                        <assign variable="n" expression="n + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="n = 2">
+                <then>
+                    <output expression="&quot;Bilangan prima&quot;" newline="False"/>
+                </then>
+                <else>
+                    <output expression="&quot;Bukan bilangan prima&quot;" newline="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

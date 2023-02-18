@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="psychopet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 07:52:33 AM"/>
+        <attribute name="created" value="cHN5Y2hvcGV0O0xBUFRPUC1JVkk0UjBFRzsyMDIzLTAyLTE3OzA2OjIwOjEwIEFNOzMzMDk="/>
+        <attribute name="edited" value="cHN5Y2hvcGV0O0xBUFRPUC1JVkk0UjBFRzsyMDIzLTAyLTE3OzA3OjUyOjMzIEFNOzQ7MzQzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Tentukkan batas akhir nilai yang ingin dilihat kelipatan 7&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="x" expression="7"/>
+            <do expression="x &lt;= n">
+                <output expression="x" newline="True"/>
+                <assign variable="x" expression="x + 7"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

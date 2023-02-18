@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="psychopet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-17 08:10:31 AM"/>
+        <attribute name="created" value="cHN5Y2hvcGV0O0xBUFRPUC1JVkk0UjBFRzsyMDIzLTAyLTE3OzA3OjE0OjMwIEFNOzMzMTU="/>
+        <attribute name="edited" value="cHN5Y2hvcGV0O0xBUFRPUC1JVkk0UjBFRzsyMDIzLTAyLTE3OzA4OjEwOjMxIEFNOzI7MzQyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, t, l, atas" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan nilai alas = &quot;" newline="False"/>
+            <input variable="a"/>
+            <output expression="&quot;masukkan nilai tinggi = &quot;" newline="False"/>
+            <input variable="t"/>
+            <output expression="&quot;masukkan nilai atas = &quot;" newline="True"/>
+            <input variable="atas"/>
+            <assign variable="l" expression="(a + atas)/2 * t"/>
+            <output expression="&quot;Luas trapesium = &quot;" newline="False"/>
+            <output expression="l" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
