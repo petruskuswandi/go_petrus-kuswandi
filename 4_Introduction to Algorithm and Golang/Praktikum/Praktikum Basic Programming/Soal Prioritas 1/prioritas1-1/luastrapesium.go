@@ -15,6 +15,10 @@ func main() {
 	fmt.Scan(&tinggi)
 
 	luas := (atas + bawah) / 2 * tinggi
+	for i := 1; i <= 25; i++ {
+		fmt.Print("=")
+	}
+	fmt.Println(" ")
 
-	fmt.Print("Luas trapesium = ", luas)
+	fmt.Println("Luas trapesium = ", luas)
 }

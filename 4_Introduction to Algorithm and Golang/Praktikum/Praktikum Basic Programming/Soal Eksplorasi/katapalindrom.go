@@ -8,7 +8,7 @@ import (
 
 func palindromo(word string) bool {
 
-	for i := 0; i < len(word)/2; i++ {
+	for i := 0; i < len(word)/2; i++ { // perulangan untuk mengecek tiap panjang character angka atau kalimat
 
 		if word[i] != word[len(word)-1-i] {
 			return false
