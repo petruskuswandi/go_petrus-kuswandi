@@ -1,12 +1,17 @@
-Rangkuman: 
-1. Algoritma adalah prosedur komputasi dengan pendefinisian input, ouput.
-2. 3 Karakteristik Algoritma
-	- berawal dan berakhir
-	- terdefinisi dengan jelas
-	- efektif/efisien
-3. Konsep Dasar Algoritma
-	- Sequential = terstruktur
-	- Branching = memilih mana yang benar sesuai dengan kondisi
-	- Looping = mengulang/memutar proses awal pendefinisian dan berhenti ketika proses terpenuhi
-4. Mempresentasikan algoritma(pseudo code) & flowchart
-		
+<h2>Rangkuman:</h2>
+<ol>
+	<li>Algoritma adalah prosedur komputasi dengan pendefinisian input, ouput.</li>
+	<li>3 Karakteristik Algoritma</li>
+	<ul>
+		<li>berawal dan berakhir</li>
+		<li>terdefinisi dengan jelas</li>
+		<li>efektif/efisien</li>
+	</ul>
+	<li>Konsep Dasar Algoritma</li>
+	<ul>
+		<li>Sequential = terstruktur</li>
+		<li>Branching = memilih mana yang benar sesuai dengan kondisi</li>
+		<li>Looping = mengulang/memutar proses awal pendefinisian dan berhenti ketika proses terpenuhi</li>
+	</ul>
+	<li>Mempresentasikan algoritma(pseudo code) & flowchart</li>
+</ol>		
