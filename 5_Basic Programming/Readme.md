@@ -5,4 +5,4 @@
   <li>Tipe Data yang sering dipakai int, string, constanta, boolean, dll.</li>
 
   <li>Mempelajari flowcontrol ada if, if else, for, for sebagai while, dll.</li>
-</ol
+</ol>
