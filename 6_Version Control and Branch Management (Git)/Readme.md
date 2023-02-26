@@ -4,4 +4,5 @@
 <li>Melakukan versioning pada control system terdistribus(vcs) adalah hal yang dapat dilakukan oleh github/gitlab/gitbucket.</li>
 <li>Melalukan dan mempelajari bagaimana memasukkan code/program ke dalam server github cli</li>
 <li>Melihat WorkFlow yang dapat dipakai dan workflow terbaik dimana branch master hanya untuk digunakan khusus program yang "jadi" sudah ditesting dan membuat cabang dari master yaitu development dimana ketika membuat banyak feature dapat digunakan pull request untuk dilakukan code review sebelum di merge ke dalam branch development dan pada akhirnya di testing dan di merge ke dalam branch master.</li>
+<li>Managing konflik pada git merge dapat terjadi ketika di stash dengan yang di push berbeda blok program dan dapat diatasi dengan kita dapat memilih memasukan perubahan yang terjadi dan membuang di code program di stash, memilih merge code program yang ada di stash dan membuang code yang sudah di commit, atau memerge dua"nya walopun code yang kita inginkan tidak sesuai dengan yang ada di file stash/langkah stash.</li>
 </ol>
