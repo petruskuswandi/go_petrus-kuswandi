@@ -2,89 +2,87 @@ package main
 
 import "fmt"
 
-type student struct {
-	name       string
-	nameEncode string
-	score      int
-}
-
 type Cipher interface {
-	Encode() string
-	Decode() string
+	Encode(string) string
+	Decode(string) string
 }
 
-type SubstitutionCipher struct {
+type substitutionCipher struct {
 	keyMap map[rune]rune
 }
 
-func NewSubstitutionCipher(key string) *SubstitutionCipher {
-	keyMap := make(map[rune]rune)
-	for i, c := range key {
-		keyMap[c] = rune('a' + i)
-	}
-	return &SubstitutionCipher{keyMap}
-}
-
-func (s *SubstitutionCipher) Encode(text string) string {
-	var result []rune
-	for _, c := range text {
-		if val, ok := s.keyMap[c]; ok {
-			result = append(result, val)
+func (c substitutionCipher) Encode(text string) string {
+	encodedText := ""
+	for _, char := range text {
+		if val, ok := c.keyMap[char]; ok {
+			encodedText += string(val)
 		} else {
-			result = append(result, c)
+			encodedText += string(char)
 		}
 	}
-	return string(result)
+	return encodedText
 }
 
-func (s *SubstitutionCipher) Decode(text string) string {
-	var result []rune
-	for _, c := range text {
-		if val, ok := s.getKeyByValue(c); ok {
-			result = append(result, val)
+func (c substitutionCipher) Decode(text string) string {
+	reverseMap := make(map[rune]rune)
+	for key, val := range c.keyMap {
+		reverseMap[val] = key
+	}
+	decodedText := ""
+	for _, char := range text {
+		if val, ok := reverseMap[char]; ok {
+			decodedText += string(val)
 		} else {
-			result = append(result, c)
+			decodedText += string(char)
 		}
 	}
-	return string(result)
-}
-
-func (s *SubstitutionCipher) getKeyByValue(value rune) (rune, bool) {
-	for k, v := range s.keyMap {
-		if v == value {
-			return k, true
-		}
-	}
-	return 0, false
-}
-
-func (s *student) Encode() string {
-	cipher := NewSubstitutionCipher("rizky")
-	s.nameEncode = cipher.Encode(s.name)
-	return s.nameEncode
-}
-
-func (s *student) Decode() string {
-	cipher := NewSubstitutionCipher("rizky")
-	s.name = cipher.Decode(s.nameEncode)
-	return s.name
+	return decodedText
 }
 
 func main() {
 	var menu int
-	var a student = student{}
-	var c Cipher = &a
+	var a string
+	var c Cipher = substitutionCipher{
+		keyMap: map[rune]rune{
+			'a': 'z',
+			'b': 'y',
+			'c': 'x',
+			'd': 'w',
+			'e': 'v',
+			'f': 'u',
+			'g': 't',
+			'h': 's',
+			'i': 'r',
+			'j': 'q',
+			'k': 'p',
+			'l': 'o',
+			'm': 'n',
+			'n': 'm',
+			'o': 'l',
+			'p': 'k',
+			'q': 'j',
+			'r': 'i',
+			's': 'h',
+			't': 'g',
+			'u': 'f',
+			'v': 'e',
+			'w': 'd',
+			'x': 'c',
+			'y': 'b',
+			'z': 'a',
+		},
+	}
 
 	fmt.Print("[1] Encrypt \n[2] Decrypt \nChoose your menu? ")
 	fmt.Scan(&menu)
 
 	if menu == 1 {
-		fmt.Print("\nInput Student Name: ")
-		fmt.Scan(&a.name)
-		fmt.Print("\nEncode of student’s name " + a.name + " is : " + c.Encode())
+		fmt.Print("\nInput Text: ")
+		fmt.Scan(&a)
+		fmt.Print("\nEncoded text of " + a + " is: " + c.Encode(a))
 	} else if menu == 2 {
-		fmt.Print("\nInput Encoded Name: ")
-		fmt.Scan(&a.nameEncode)
-		fmt.Print("\nDecode of student’s name " + a.nameEncode + " is : " + c.Decode())
+		fmt.Print("\nInput Encoded Text: ")
+		fmt.Scan(&a)
+		fmt.Print("\nDecoded text of " + a + " is: " + c.Decode(a))
 	}
 }
